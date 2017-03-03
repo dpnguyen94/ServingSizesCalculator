@@ -14,6 +14,10 @@ public class PotCollection {
         pots.add(pot);
     }
 
+    public void removePot(int indexOfPotRemoving) {
+        pots.remove(indexOfPotRemoving);
+    }
+
     public void changePot(Pot pot, int indexOfPotEditing) {
         validateIndexWithException(indexOfPotEditing);
         pots.remove(indexOfPotEditing);
@@ -36,6 +40,26 @@ public class PotCollection {
             descriptions[i] = pot.getName() + " - " + pot.getWeightInG() + "g";
         }
         return descriptions;
+    }
+
+    public String[] getPotName(){
+        String[] potname = new String[countPots()];
+        for (int i = 0; i < countPots(); i ++) {
+            Pot pot = getPot(i);
+            potname[i] = pot.getName();
+        }
+
+        return potname;
+    }
+
+    public int[] getPotWeight() {
+        int[] potweight = new int[countPots()];
+        for (int i = 0; i < countPots(); i ++){
+            Pot pot = getPot(i);
+            potweight[i] = pot.getWeightInG();
+        }
+
+        return potweight;
     }
 
     private void validateIndexWithException(int index) {

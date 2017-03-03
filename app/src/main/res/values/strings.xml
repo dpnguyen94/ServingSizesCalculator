@@ -15,4 +15,6 @@
     <string name="weight_offood">Weight of food (g)</string>
     <string name="number_of_serving"># Servings</string>
     <string name="serving_weight">Serving Weight</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
 </resources>
